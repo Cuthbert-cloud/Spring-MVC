@@ -19,4 +19,8 @@ public class DemoApplication {
 		return String.format("Hello %s!", name);
 	}
 
+	@GetMapping("/Spring")
+	public String welcomeSpring() {
+		return "Spring Framework";
+	}
 }
