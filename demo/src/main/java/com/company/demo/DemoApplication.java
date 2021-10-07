@@ -29,8 +29,7 @@ public class DemoApplication {
 
 	//@GetMapping("/maths")
 	@RequestMapping("/maths")
-	public String maths() {
-		int A=2,B=2,C=A+B;
-		return String.format("Total = %s",C);
+	public int maths(@RequestParam(value = "first", defaultValue = "0") int num1, @RequestParam(value = "second", defaultValue = "0") int num2) {
+		return num1+num2;
 	}
 }
