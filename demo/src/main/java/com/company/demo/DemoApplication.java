@@ -2,10 +2,11 @@ package com.company.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @SpringBootApplication
 @RestController
@@ -28,8 +29,7 @@ public class DemoApplication {
 
 	//@GetMapping("/maths")
 	@RequestMapping("/maths")
-	public String maths() {
-		int A=2,B=2,C=A+B;
-		return String.format("Total = %s",C);
+	public int maths(@RequestParam(value = "first", defaultValue = "0") int num1, @RequestParam(value = "second", defaultValue = "0") int num2) {
+		return num1+num2;
 	}
 }
