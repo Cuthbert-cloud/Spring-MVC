@@ -13,7 +13,7 @@ public class RestServiceApplication {
 		for (String bean : ac.getBeanDefinitionNames()) {
 			System.out.println(i + ". " + bean);
 			++i;
-			System.out.println(ac.isSingleton(bean) ? "Yes" : "No");
+			System.out.println(ac.isSingleton(bean) ? "Singleton" : "Prototype");
 		}
 	}
 
