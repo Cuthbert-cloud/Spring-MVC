@@ -12,6 +12,7 @@ public class Student {
     private Integer age;
 
     @NotNull
+    @Size(min = 2)
     private Integer ID;
 
     public String getName() {
